@@ -1,0 +1,203 @@
+.container {
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    max-height: 567px;
+    border: 1px solid #eeeff5;
+    font-family: "FF DIN Pro", sans-serif;
+    display: flex;
+    margin: auto;
+    margin-top: 70px;
+    align-items: center;
+}
+
+.sidebar {
+    width: 100px;
+    height: 567px;
+    float: left;
+}
+
+.topbar {
+    display: none;
+}
+
+.productBrand {
+    display: flex;
+    height: 80px;
+    border-bottom: 1px solid #eeeff5;
+    cursor: pointer;
+}
+
+.productBrand:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+.productBrand img {
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+.product-area {
+    float: left;
+    display: flex;
+    max-height: 567px;
+    width: calc(100% - 100px);
+}
+
+.brandImage {
+    display: flex;
+    float: left;
+    cursor: pointer;
+    position: none;
+    width: 100%;
+    max-width: 398px;
+}
+
+.products {
+    float: left;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 567px;
+    display: flex;
+}
+
+.productItem {
+    cursor: pointer;
+    display: block;
+    width: 33.1%;
+    height: 283px;
+    border-right: 1px solid #eeeff5;
+    border-bottom: 1px solid #eeeff5;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+.productItem:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+.productItem img {
+    max-width: 130px;
+    margin-top: 15px;
+}
+
+.productContent {
+    display: block;
+}
+
+.productContent p {
+    height: 36px;
+    text-align: left;
+    padding-left: 15px;
+    overflow: hidden;
+}
+
+.productContent div {
+    text-align: left;
+}
+
+.productPrice {
+    padding-left: 15px;
+    display: inline;
+    color: rgb(35, 76, 154);
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.productOldPrice {
+    display: inline;
+    font-size: 10px;
+    text-decoration: line-through;
+}
+
+.buyProduct {
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 15px;
+    width: 80%;
+    height: 32px;
+    background-color: white;
+    color: rgb(35, 76, 154);
+}
+
+.buyProduct:hover {
+    color: white;
+    background-color: rgb(35, 76, 154);
+    cursor: pointer;
+}
+
+
+.popup {
+    width: 300px;
+    position: fixed;
+    display: none;
+    bottom: 10px;
+    background-color: rgb(34, 34, 94);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.popup-left {
+    float: left;
+    width: 85%;
+    vertical-align: middle;
+    margin-top: 5px;
+}
+
+.popup-left img {
+    float: left;
+    width: 40px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+
+.close-btn {
+    cursor: pointer;
+    color: white;
+    float: right;
+    width: 8%;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        border: none;
+    }
+    .brandImage {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .product-area {
+        width: 100%;
+    }
+
+    .productItem {
+        width: 49.5%;
+        justify-content: center;
+    }
+
+    .topbar {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px;
+        overflow: scroll;
+    }
+
+    .topbar div {
+        cursor: pointer;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
